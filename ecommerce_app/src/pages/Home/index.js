@@ -3,7 +3,7 @@ import SliderBanner from "./slider/index";
 import CatSlider from "../../components/catSlider";
 import Banners from "../../components/banners";
 import "./style.css";
-import Product from "../../components/product";
+// import Product from "../../components/product";
 import TopProducts from "./TopProducts";
 import Banner4 from "../../assets/images/banner4.jpg";
 import Slider from "react-slick";
