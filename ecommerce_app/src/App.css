@@ -165,6 +165,10 @@ p {
   font-size: 20px;
 }
 
+.priceRange span {
+  font-size: 20px;
+}
+
 .filters {
   padding: 25px 0px;
 }
