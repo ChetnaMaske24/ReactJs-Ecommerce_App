@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import "./style.css";
 import Rating from "@mui/material/Rating";
 import { Button } from "@mui/material";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import CompareArrowsOutlinedIcon from "@mui/icons-material/CompareArrowsOutlined";
@@ -38,7 +38,7 @@ const Product = (props) => {
 
       {productData !== undefined && (
         <>
-          {/* <Link to={`/product/${productData.id}`}> */}
+          <Link to={`/product/${productData.id}`}>
             <div className="imgWrapper">
               <div className="p-4 wrapper mb-3">
                 <img
@@ -67,7 +67,7 @@ const Product = (props) => {
                 </ul>
               </div>
             </div>
-          {/* 8 */}
+          </Link>
 
           <div className="info">
             <span className="d-block catName">{productData.brand}</span>
