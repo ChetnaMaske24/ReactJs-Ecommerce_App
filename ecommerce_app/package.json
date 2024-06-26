@@ -10,7 +10,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
     "custom-react-inner-image-zoom": "^3.0.6",
+    "firebase": "^10.12.2",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.3.1",
@@ -22,6 +24,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
     "react-slider": "^2.0.6",
+    "rn-range-slider": "^2.2.2",
     "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4"
   },
