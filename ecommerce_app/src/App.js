@@ -1,6 +1,7 @@
 import React, { useEffect, useState, createContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import './responsive.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/header/header";
