@@ -1,11 +1,14 @@
 import React, { useEffect, useContext } from "react";
 import Slider from "react-slick";
 import "./index.css";
+
 import Slide1 from "../../../assets/images/slider-1.png";
 import Slide2 from "../../../assets/images/slider-2.png";
 import Button from "@mui/material/Button";
+
 import Newsletter from "../../../components/newsletter";
-// import { MyContext } from '../../../App';
+
+import { MyContext } from "../../../App";
 
 const HomeSlider = () => {
   const context = useContext(MyContext);

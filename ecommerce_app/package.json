@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
@@ -23,13 +25,13 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
-    "react-slider": "^2.0.6",
+    "reactjs-image-zoom": "^1.0.8",
     "rn-range-slider": "^2.2.2",
     "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3006 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -18,6 +18,16 @@ const Cart = () => {
   const context = useContext(MyContext);
   const history = useNavigate();
 
+  useEffect(() => {
+    if (context.isLogin !== "true") {
+      history("/signIn");
+    } else {
+      setCartItems(context.cartItems);
+    }
+
+    window.scrollTo(0, 0);
+  }, [context.cartItems]);
+
   const updateCart = (items) => {
     setCartItems(items);
   };

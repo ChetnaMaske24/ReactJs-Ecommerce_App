@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-
 import img1 from "../../../assets/images/thumbnail-1.jpg";
 import img2 from "../../../assets/images/thumbnail-2.jpg";
 import img3 from "../../../assets/images/thumbnail-3.jpg";

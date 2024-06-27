@@ -40,12 +40,9 @@ const Listing = (props) => {
                 });
               });
           }
-        }
-        //page == double cat
-        else {
+        } else {
           item.items.length !== 0 &&
             item.items.map((item_, index_) => {
-              // console.log(item_.cat_name.replace(/[^A-Za-z]/g,"-").toLowerCase())
               if (
                 item_.cat_name.split(" ").join("-").toLowerCase() ==
                 id.split(" ").join("-").toLowerCase()
@@ -74,13 +71,11 @@ const Listing = (props) => {
   const filterByBrand = (keyword) => {
     props.data.length !== 0 &&
       props.data.map((item, index) => {
-        //page == single cat
         if (props.single === true) {
           item.items.length !== 0 &&
             item.items.map((item_) => {
               item_.products.map((item__, index__) => {
                 if (item__.brand.toLowerCase() === keyword.toLowerCase()) {
-                  //console.log(item__)
                   itemsData.push({
                     ...item__,
                     parentCatName: item.cat_name,
@@ -89,12 +84,9 @@ const Listing = (props) => {
                 }
               });
             });
-        }
-        //page == double cat
-        else {
+        } else {
           item.items.length !== 0 &&
             item.items.map((item_, index_) => {
-              // console.log(item_.cat_name.replace(/[^A-Za-z]/g,"-").toLowerCase())
               if (
                 item_.cat_name.split(" ").join("-").toLowerCase() ==
                 id.split(" ").join("-").toLowerCase()
@@ -126,7 +118,6 @@ const Listing = (props) => {
   const filterByPrice = (minValue, maxValue) => {
     props.data.length !== 0 &&
       props.data.map((item, index) => {
-        //page == single cat
         if (props.single === true) {
           if (id === item.cat_name.toLowerCase()) {
             item.items.length !== 0 &&
@@ -179,7 +170,6 @@ const Listing = (props) => {
   const filterByRating = (keyword) => {
     props.data.length !== 0 &&
       props.data.map((item, index) => {
-        //page == single cat
         if (props.single === true) {
           if (item.cat_name.toLowerCase() == id.toLowerCase()) {
             item.items.length !== 0 &&
@@ -193,12 +183,9 @@ const Listing = (props) => {
                 });
               });
           }
-        }
-        //page == double cat
-        else {
+        } else {
           item.items.length !== 0 &&
             item.items.map((item_, index_) => {
-              // console.log(item_.cat_name.replace(/[^A-Za-z]/g,"-").toLowerCase())
               if (
                 item_.cat_name.split(" ").join("-").toLowerCase() ==
                 id.split(" ").join("-").toLowerCase()
