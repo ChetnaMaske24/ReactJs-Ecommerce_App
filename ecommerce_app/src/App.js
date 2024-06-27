@@ -3,21 +3,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './responsive.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home from './pages/Home/index';
-
 import Listing from './pages/Listing';
 import NotFound from './pages/NotFound';
 import DetailsPage from './pages/Details';
-// import Checkout from './pages/checkout';
+import Checkout from './pages/checkout';
 import axios from 'axios';
 import Cart from './pages/cart';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Loader from './assets/images/loading.gif';
-
 import data from './data';
 
 const MyContext = createContext();
@@ -43,14 +40,10 @@ function App() {
     const is_Login = localStorage.getItem('isLogin');
     setIsLogin(is_Login);
 
-   
       setTimeout(() => {
         setProductData(data[1]);
         setIsloading(false);
       }, 3000);
-
-
-  
   }, []);
 
  
@@ -81,9 +74,6 @@ function App() {
 
   }
 
-
-
-
   const removeItemsFromCart = async(id) => {
     const response = await axios.delete(`http://localhost:5000/cartItems/${id}`);
     if (response !== null) {
@@ -95,18 +85,15 @@ function App() {
     setCartItems([])
   }
 
-
   const signIn = () => {
     const is_Login = localStorage.getItem('isLogin');
     setIsLogin(is_Login);
   }
 
-
   const signOut = () => {
     localStorage.removeItem('isLogin');
     setIsLogin(false);
   }
-
 
   const openFilters=()=>{
     setIsopenFilters(!isOpenFilters)
@@ -138,9 +125,7 @@ function App() {
       <MyContext.Provider value={value}>
         {
           isLoading===true && <div className='loader'><img src={Loader}/></div>
-        }
-
-        
+        }  
         <Header data={data.productData} />
         <Routes>
           <Route exact={true} path="/" element={<Home data={data.productData} />} />
@@ -150,7 +135,7 @@ function App() {
           <Route exact={true} path="/cart" element={<Cart />} />
           <Route exact={true} path="/signIn" element={<SignIn />} />
           <Route exact={true} path="/signUp" element={<SignUp />} />
-          {/* <Route exact={true} path="/checkout" element={<Checkout />} /> */}
+          <Route exact={true} path="/checkout" element={<Checkout />} />
           <Route exact={true} path="*" element={<NotFound />} />
         </Routes>
        <Footer/>
@@ -158,7 +143,6 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;
 
 export { MyContext }
